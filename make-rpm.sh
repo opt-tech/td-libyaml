@@ -18,7 +18,7 @@ rm -fR yaml-0.1.4*
 wget 'http://pyyaml.org/download/libyaml/yaml-0.1.4.tar.gz'
 tar vzxf yaml-0.1.4.tar.gz
 cp Makefile.am yaml-0.1.4/src
-cd yaml-0.1.4 && libtoolize --force && aclocal && automake && autoconf && cd ..
+cd yaml-0.1.4 && libtoolize --force && aclocal && automake --add-missing && automake && autoconf && cd ..
 rm yaml-0.1.4.tar.gz
 tar cvf yaml-0.1.4.tar.gz yaml-0.1.4
 mv yaml-0.1.4 $dst
